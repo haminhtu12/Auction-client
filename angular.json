@@ -55,13 +55,22 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ProjectAuction:build"
+            "browserTarget": "ProjectAuction:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -120,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "ProjectAuction"
+  "defaultProject": "ProjectAuction",
+  "cli": {
+    "analytics": "34df2a86-5540-4480-941b-f414062bdb8e"
+  }
 }
