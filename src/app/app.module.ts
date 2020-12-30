@@ -3,20 +3,35 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './component/test/test.component';
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule, routes} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import {AngularFireLite} from 'angularfire-lite';
+import {environment} from '../environments/environment';
+import { LoginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
+import {FormsModule} from '@angular/forms';
+import { ErrorComponent } from './component/ui/error/error.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
+
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    LoginComponent,
+    SignupComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    AngularFireLite.forRoot(environment.config),
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
