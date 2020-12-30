@@ -18,8 +18,14 @@ export class CustomerService {
   }
 
   signup(email, pass) {
-    return this.auth.signup(email, pass);
+    // return this.auth.signup(email, pass);
+    console.log(this.getUsers());
+    return true;
   }
-
+  getUsers(): Observable<any[]> {
+    // get users from api
+    return this.http.get('/Api/Customer', options)
+      .map((response: Response) => response.json());
+  }
 
 }

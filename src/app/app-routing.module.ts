@@ -4,6 +4,8 @@ import {Routes} from '@angular/router';
 import {LoginComponent} from './component/login/login.component';
 import {AuthGuard} from './auth.guard';
 import {SignupComponent} from './component/signup/signup.component';
+import {AppGuard} from './app.guard';
+import {HomeComponent} from './component/home/home.component';
 
 
 
@@ -15,10 +17,10 @@ import {SignupComponent} from './component/signup/signup.component';
 })
 export class AppRoutingModule { }
 export  const routes: Routes = [
-  // {path: '', component: HomeComponent, canActivate: [AppGuard]},
+  {path: '', component: HomeComponent},
   // {path: 'details/:city', component: DetailsComponent, canActivate: [AppGuard]},
   // {path: 'add', component: AddComponent, canActivate: [AppGuard]},
-  {path: 'login', component: LoginComponent},
+  {path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
   {path: 'signup', component: SignupComponent , canActivate: [AuthGuard]},
   {path: '**', redirectTo: ''}
 ];

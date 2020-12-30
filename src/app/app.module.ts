@@ -12,6 +12,7 @@ import { SignupComponent } from './component/signup/signup.component';
 import {FormsModule} from '@angular/forms';
 import { ErrorComponent } from './component/ui/error/error.component';
 import {RouterModule} from '@angular/router';
+import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
 
@@ -20,7 +21,8 @@ import {RouterModule} from '@angular/router';
     TestComponent,
     LoginComponent,
     SignupComponent,
-    ErrorComponent
+    ErrorComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
