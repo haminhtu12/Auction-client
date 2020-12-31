@@ -7,22 +7,18 @@ import { Observable } from 'rxjs';
 })
 export class AuthGuard implements CanActivate {
   constructor(
-    // public fb: FbService,
-    public router: Router) {
-  }  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
-
-    // return this.fb.isAuth().pipe(map(
-    //   auth => {
-    //     if (!auth) {
-    //       return true;
-    //     } else {
-    //       this.router.navigate(['/']);
-    //       return false;
-    //     }
-    //   }
-    // ));
+    public router: Router) {}
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): boolean {
+    if (localStorage.getItem('email') != null) {
+      console.log('true');
+      return true;
+    } else {
+      console.log('false');
+      this.router.navigate(['/login']);
+      return false;
+    }
+    return  true;
   }
 }

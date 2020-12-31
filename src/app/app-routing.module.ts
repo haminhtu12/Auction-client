@@ -20,7 +20,7 @@ export  const routes: Routes = [
   {path: '', component: HomeComponent},
   // {path: 'details/:city', component: DetailsComponent, canActivate: [AppGuard]},
   // {path: 'add', component: AddComponent, canActivate: [AppGuard]},
-  {path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
+  {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent , canActivate: [AuthGuard]},
   {path: '**', redirectTo: ''}
 ];

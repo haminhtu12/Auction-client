@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {first} from 'rxjs/operators';
-import {Router} from '@angular/router';
 import {CustomerService} from '../../service/customer/customer.service';
 
 @Component({
@@ -10,20 +8,31 @@ import {CustomerService} from '../../service/customer/customer.service';
 })
 export class LoginComponent implements OnInit {
   errorMessage = '';
-  constructor(
-    public cs: CustomerService,
-    public router: Router) {
-  }
+  email: string;
+  pass: string;
+  response: any;
+  valid = false;
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
+    this.getList();
   }
-
   login(e) {
-    this.cs.signin(e.target.email.value, e.target.password.value).pipe(first()).subscribe(() => {
-      this.router.navigateByUrl('');
-    },(err) => {
-      this.errorMessage = err;
-      setTimeout(() => this.errorMessage = '', 2000);
+    for (let  i= 0; i < this.response.length; i++) {
+      if ((e.target.email.value == this.response[i].Email) && (e.target.password.value == this.response[i].Password)) {
+        this.valid = true;
+        break;
+      }
+    }
+    if (this.valid){
+      localStorage.setItem('email', e.target.email.value);
+      localStorage.setItem('password', e.target.password.value);
+    }
+    this.valid = false;
+  }
+  getList(): any {
+    this.customerService.findAll().subscribe(res => {
+      this.response = res;
     });
   }
 }

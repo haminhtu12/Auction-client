@@ -28,7 +28,7 @@ import { HomeComponent } from './component/home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFireLite.forRoot(environment.config),
+    // AngularFireLite.forRoot(environment.config),
     RouterModule.forRoot(routes),
     FormsModule
   ],

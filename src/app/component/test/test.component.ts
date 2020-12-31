@@ -8,7 +8,7 @@ import {TestService} from '../../service/test.service';
 })
 export class TestComponent implements OnInit {
   response: any;
-  constructor(      private testService: TestService,
+  constructor(private testService: TestService,
   ) { }
 
   ngOnInit(): void {

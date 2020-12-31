@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
   getList(): void {
     this.testService.findAll().subscribe(res => {
       this.response = res;
-      console.log(this.response);
     });
   }
 }

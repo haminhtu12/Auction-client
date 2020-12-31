@@ -8,7 +8,7 @@ export class TestService {
 
   constructor(private http: HttpClient) { }
   public findAll(): Observable<any> {
-    const url = 'Api/TypeBanner';
+    const url = 'Api/Customer';
     return this.http.get(url);
   }
 }
