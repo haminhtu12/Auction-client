@@ -13,6 +13,8 @@ import {FormsModule} from '@angular/forms';
 import { ErrorComponent } from './component/ui/error/error.component';
 import {RouterModule} from '@angular/router';
 import { HomeComponent } from './component/home/home.component';
+import {ListProductComponent} from './component/list-product/list-product.component';
+import {CarouselComponent} from './component/carousel/carousel.component';
 
 @NgModule({
 
@@ -22,7 +24,9 @@ import { HomeComponent } from './component/home/home.component';
     LoginComponent,
     SignupComponent,
     ErrorComponent,
-    HomeComponent
+    HomeComponent,
+    ListProductComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
