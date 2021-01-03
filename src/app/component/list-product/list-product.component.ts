@@ -30,9 +30,6 @@ export class ListProductComponent implements OnInit {
         } else {
           product.Status = 1;
           product.Timer = Tool.getDataDiff(currentDate, endTime);
-          product.hour = product.Timer.hour;
-          product.date = endTime;
-          console.log(product.Timer);
         }
       });
     });

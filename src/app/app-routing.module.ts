@@ -6,6 +6,7 @@ import {AuthGuard} from './auth.guard';
 import {SignupComponent} from './component/signup/signup.component';
 import {AppGuard} from './app.guard';
 import {HomeComponent} from './component/home/home.component';
+import {AuctionProductComponent} from './component/auction-product/auction-product.component';
 
 
 
@@ -22,5 +23,6 @@ export  const routes: Routes = [
   // {path: 'add', component: AddComponent, canActivate: [AppGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent , canActivate: [AuthGuard]},
-  {path: '**', redirectTo: ''}
+  {path: 'auction-product/:SaleManID/:Created/:ID', component: AuctionProductComponent},
+  {path: '**', redirectTo: ''},
 ];

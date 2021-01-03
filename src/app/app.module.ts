@@ -19,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
+import { AuctionProductComponent } from './component/auction-product/auction-product.component';
 @NgModule({
 
   declarations: [
@@ -32,7 +33,8 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
     CarouselComponent,
     FooterComponent,
     HeaderComponent,
-    NavBarComponent
+    NavBarComponent,
+    AuctionProductComponent
   ],
   imports: [
     BrowserModule,
