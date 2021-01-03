@@ -15,7 +15,10 @@ import {RouterModule} from '@angular/router';
 import { HomeComponent } from './component/home/home.component';
 import {ListProductComponent} from './component/list-product/list-product.component';
 import {CarouselComponent} from './component/carousel/carousel.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './component/footer/footer.component';
+import { HeaderComponent } from './component/header/header.component';
+import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 @NgModule({
 
   declarations: [
@@ -26,7 +29,10 @@ import {CarouselComponent} from './component/carousel/carousel.component';
     ErrorComponent,
     HomeComponent,
     ListProductComponent,
-    CarouselComponent
+    CarouselComponent,
+    FooterComponent,
+    HeaderComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,8 @@ import {CarouselComponent} from './component/carousel/carousel.component';
     HttpClientModule,
     // AngularFireLite.forRoot(environment.config),
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

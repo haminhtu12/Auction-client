@@ -15,13 +15,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
    this.getList();
   }
-  // tslint:disable-next-line:typedef
   getList(){
     this.productService.findAll().subscribe(res => {
       if (res) {
         this.products = res;
       }
-      console.log('â', this.products);
     });
   }
 }
