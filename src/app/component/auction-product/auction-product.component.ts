@@ -34,7 +34,17 @@ export class AuctionProductComponent implements OnInit {
     // @ts-ignore
     this.subscriptionTimer = interval(1000).pipe(filter(() => Boolean(this.products))).subscribe(() => {
       this.productDetail = this.products.find(element => element.ID == ID);
-      console.log(this.productDetail);
+      const currentDate = new Date();
+      const startTime   = new Date(this.productDetail.StartDateTime);
+      const endTime     = new Date(this.productDetail.EndDateTime);
+      if (currentDate.getTime() < startTime.getTime()) {
+        this.productDetail.Status = 0;
+      } else if (currentDate.getTime() > endTime.getTime()) {
+        this.productDetail.Status = 2;
+      } else {
+        this.productDetail.Status = 1;
+        this.productDetail.Timer = Tool.getDataDiff(currentDate, endTime);
+      }
     });
 
   }

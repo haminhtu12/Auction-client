@@ -1,2 +1,236 @@
-<p>auction-product works!</p>
-aaaaaaaaaaaaaaaaaaaaa
+<div [class.d-none]="productDetail" class="container-fluid ">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+
+      <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+          <!-- Avatar -->
+          <div class="ph-item">
+            <div class="ph-picture"></div>
+            <div class="ph-picture"></div>
+          </div>
+        </div>
+
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+          <!-- //Thông tin sản phẩm --><br>
+          <div class="ph-item">
+            <div class="ph-col-12">
+              <div class="ph-row">
+                <div class="ph-col-10 big"></div>
+                <div class="ph-col-2 big empty"></div>
+                <div class="ph-col-6"></div>
+                <div class="ph-col-4 empty"></div>
+                <div class="ph-col-12 empty"></div>
+                <div class="ph-col-6"></div>
+                <div class="ph-col-4 empty"></div>
+                <div class="ph-col-12 empty"></div>
+                <div class="ph-col-6"></div>
+                <div class="ph-col-4 empty"></div>
+                <div class="ph-col-6"></div>
+                <div class="ph-col-4 empty"></div>
+                <div class="ph-col-4"></div>
+                <div class="ph-col-6 empty"></div>
+              </div>
+              <div class="ph-row">
+                <div class="ph-col-12 empty"></div>
+                <div class="ph-col-4"></div>
+                <div class="ph-col-6 empty"></div>
+                <div class="ph-col-12 empty"></div>
+                <div class="ph-col-4"></div>
+                <div class="ph-col-6 empty"></div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- <div class="progress">
+          <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+            style="width: 50%;">
+            <span class="sr-only"> 01:20:21 </span>
+          </div>
+        </div> -->
+
+          <!-- <h4>
+          <label>Giá được đặt cao nhất của sản phẩm hiện tại:
+            <span style="color:red">10.000.000đ</span>
+          </label>
+
+        </h4> -->
+
+          <!-- <br> -->
+          <!-- <label>Sản phẩm này bạn đang tham gia đấu giá</label> -->
+          <!-- <label>Giá đặt cao nhất của bạn là </label> <span>10.000.000đ</span> -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <!-- Mô tả --><br>
+          <div class="ph-item">
+            <div class="ph-picture"></div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <!-- //Table -->
+      <div class="ph-item">
+        <div class="ph-col-12">
+          <div class="ph-row">
+            <div class="ph-col-12 big"></div>
+          </div>
+          <div class="ph-picture"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div [class.d-none]="!productDetail" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+
+      <div class="row">
+        <div *ngIf="productDetail" class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+          <!-- Avatar -->
+          <img [src]="productDetail?.Image" class="img-fluid" alt="Hình sản phẩm">
+        </div>
+        <div *ngIf="productDetail" class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+          <!-- //Thông tin sản phẩm --><br>
+          <h2>{{productDetail.proname}}</h2>
+<!--          <p>Chủ phiên: {{productDetail.owner.userName}}</p>-->
+          <p *ngIf="productDetail.StartingPrice">Giá sàn: {{productDetail.StartingPrice}}</p>
+          <p *ngIf="productDetail.PriceStep">Bước giá: {{productDetail.PriceStep}}</p>
+<!--          <p>Loại hình đấu giá: <span class="badge badge-secondary">{{productDetail.auctionType.name}}</span> </p>-->
+<!--          <p *ngIf="productDetail.auctionCondition?.vipAccount"><span class="badge badge-info">Yêu cầu vip</span>-->
+<!--          </p>-->
+          <br>
+          <div [ngSwitch]="productDetail.Status">
+            <div *ngSwitchCase="1">
+              <p>Trạng thái: <span class="badge badge-success">Đang diễn ra</span></p>
+              <br>
+              <label *ngIf="productDetail.Timer">Còn lại
+                <span>{{ productDetail.Timer?.day ? productDetail.Timer?.day+' ngày ' : '' }}{{ productDetail.Timer?.hour }}:{{ productDetail.Timer?.minute }}:{{productDetail.Timer?.second}}
+								</span>
+              </label>
+<!--              <ng-container *ngIf="(user$ | async)?.role != 'USERA' && (user$ | async)?.role != 'ADMIN'">-->
+<!--                <form [formGroup]="auctionForm">-->
+<!--                  <input style="width : 200px;"-->
+<!--                         [class.is-invalid]="auctionForm.get('auctionPrice').invalid&&auctionForm.get('auctionPrice').touched"-->
+<!--                         formControlName="auctionPrice" class="form-control" type="number" min="10000"-->
+<!--                         step="10000" max="999999999" step="1000" />-->
+<!--                  <div class="invalid-feedback">-->
+<!--                    Giá tiền không hợp lệ-->
+<!--                  </div>-->
+<!--                  <br>-->
+<!--                  <button [disabled]="auctionForm.invalid" (click)="auction()" type="button"-->
+<!--                          class="btn btn-success">Đặt đấu giá</button>-->
+<!--                </form>-->
+<!--              </ng-container>-->
+            </div>
+            <div *ngSwitchCase="2">
+              <P>Trạng thái: <label class="badge badge-danger">Đã kết thúc</label></P>
+              <br>
+              <ng-container *ngIf="productDetail.winner">
+                <p>ID người chiến thắng <span class="badge badge-warning">{{product.winner}}</span></p>
+                <p>
+<!--                  {{ userDetails$ | async }}-->
+                </p>
+              </ng-container>
+            </div>
+            <div *ngSwitchCase="0">
+              <p>Trạng thái: <span class="badge badge-warning">Sắp diễn ra</span></p>
+              <br>
+              <label>{{productDetail.startTime | date:'short'}}</label>
+            </div>
+          </div>
+
+          <!-- <div class="progress">
+          <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+            style="width: 50%;">
+            <span class="sr-only"> 01:20:21 </span>
+          </div>
+        </div> -->
+
+          <!-- <h4>
+          <label>Giá được đặt cao nhất của sản phẩm hiện tại:
+            <span style="color:red">10.000.000đ</span>
+          </label>
+
+        </h4> -->
+
+          <!-- <br> -->
+          <!-- <label>Sản phẩm này bạn đang tham gia đấu giá</label> -->
+          <!-- <label>Giá đặt cao nhất của bạn là </label> <span>10.000.000đ</span> -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <!-- Mô tả --><br>
+          <section class="border border-warning rounded">
+            <div class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active">Mô tả sản phẩm</a>
+              </li>
+            </div>
+
+            <div class="p-3">
+              {{productDetail?.Description}}
+            </div>
+          </section>
+          <!-- <section class="border border-warning rounded">
+            <div class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active">Hình thức đấu giá</a>
+              </li>
+            </div>
+
+            <div class="p-3">
+              {{product.auctionType.name}}
+            </div>
+          </section> -->
+        </div>
+      </div>
+
+      <div class="row">
+<!--        <canvas-->
+<!--          [class.d-none]="!productDetail?.auctionType.id=='277f6be0-6d08-4128-a3a7-e39629c541ce'&&auctionHistorys&&auctionHistorys.length>0"-->
+<!--          id="barChart" class="col-xs-12 col-sm-12 col-md-8 col-lg-8"></canvas>-->
+      </div>
+    </div>
+
+
+<!--    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">-->
+<!--      &lt;!&ndash; //Table &ndash;&gt;-->
+<!--      <div-->
+<!--        *ngIf="productDetail?.auctionType.id=='277f6be0-6d08-4128-a3a7-e39629c541ce'&&auctionHistorys&&auctionHistorys.length>0">-->
+<!--        <span class="label label-success">Bảng danh sách thông tin đấu giá</span>-->
+<!--        <div class="table-responsive">-->
+<!--          <table class="table table-bordered table-striped table-border">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--              <th>Xếp hạng</th>-->
+<!--              <th>ID tham gia</th>-->
+<!--              <th>Số tiền (VNĐ)</th>-->
+<!--              <th>Thời gian</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr *ngFor="let history of auctionHistorys;let i=index">-->
+<!--              <td>{{i+1}}</td>-->
+<!--              <td>{{history.userName}}</td>-->
+<!--              <td>{{history.price | currency:'VND'}}</td>-->
+<!--              <td>{{history.time | date:'short'}}</td>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--          </table>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+</div>
