@@ -18,7 +18,7 @@
 <!--        <a class="nav-link" href="#">Phiên đấu giá của tôi</a>-->
 <!--      </li> &ndash;&gt;-->
 <!--      <li class="nav-item dropdown" ngbDropdown>-->
-<!--        <ng-container *ngIf="(auth.user$ | async) as user">-->
+<!--        <ng-container *ngIf="user != null">-->
 <!--          <a class="nav-link dropdown-toggle" id="navbarDropdown" ngbDropdownToggle role="button"-->
 <!--             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
 <!--            <span>{{ user.userName }}</span>-->
@@ -26,13 +26,13 @@
 <!--          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">-->
 <!--            <a *ngFor="let item of currentRole" class="dropdown-item"-->
 <!--               [routerLink]="item.route">{{item.name}}</a>-->
-<!--            <a *ngIf="user.role=='USERB'&&!user.vipMember" class="dropdown-item" (click)="upgradeVipmember()" >Nâng cấp vip (Chỉ 15,000VNĐ)</a>-->
+<!--&lt;!&ndash;            <a *ngIf="user.role=='USERB'&&!user.vipMember" class="dropdown-item" (click)="upgradeVipmember()" >Nâng cấp vip (Chỉ 15,000VNĐ)</a>&ndash;&gt;-->
 <!--          </div>-->
 <!--        </ng-container>-->
 <!--      </li>-->
 <!--    </ul>-->
 <!--    <ul class="nav navbar-nav justify-content-end w-100">-->
-<!--      <ng-container *ngIf="!(auth.user$ | async) as user; else nonUser">-->
+<!--      <ng-container *ngIf="user">-->
 <!--        <li class="nav-item">-->
 <!--          <a class="nav-link" routerLink="/login">Đăng nhập</a>-->
 <!--        </li>-->
@@ -43,7 +43,7 @@
 <!--    </ul>-->
 <!--    <ng-template #nonUser>-->
 <!--      <li class="nav-item">-->
-<!--        <a class="nav-link" (click)="auth.logout()">Đăng xuất</a>-->
+<!--&lt;!&ndash;        <a class="nav-link" (click)="auth.logout()">Đăng xuất</a>&ndash;&gt;-->
 <!--      </li>-->
 <!--    </ng-template>-->
 <!--  </div>-->

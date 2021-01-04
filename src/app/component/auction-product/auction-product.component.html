@@ -113,11 +113,13 @@
             <div *ngSwitchCase="1">
               <p>Trạng thái: <span class="badge badge-success">Đang diễn ra</span></p>
               <br>
+              <p>Giá cao nhất hiện tại : </p>
               <label *ngIf="productDetail.Timer">Còn lại
                 <span>{{ productDetail.Timer?.day ? productDetail.Timer?.day+' ngày ' : '' }}{{ productDetail.Timer?.hour }}:{{ productDetail.Timer?.minute }}:{{productDetail.Timer?.second}}
 								</span>
               </label>
 <!--              <ng-container *ngIf="(user$ | async)?.role != 'USERA' && (user$ | async)?.role != 'ADMIN'">-->
+<!--                <form [formGroup]="auctionForm">-->
 <!--                <form [formGroup]="auctionForm">-->
 <!--                  <input style="width : 200px;"-->
 <!--                         [class.is-invalid]="auctionForm.get('auctionPrice').invalid&&auctionForm.get('auctionPrice').touched"-->
@@ -129,7 +131,19 @@
 <!--                  <br>-->
 <!--                  <button [disabled]="auctionForm.invalid" (click)="auction()" type="button"-->
 <!--                          class="btn btn-success">Đặt đấu giá</button>-->
-<!--                </form>-->
+<!--                </form>  -->
+              <form >
+                  <input style="width : 200px;"
+
+                         class="form-control" type="number" min="10000"
+                         step="10000" max="999999999" step="1000" />
+                  <div class="invalid-feedback">
+                    Giá tiền không hợp lệ
+                  </div>
+                  <br>
+                  <button  (click)="auction()" type="button"
+                          class="btn btn-success">Đặt đấu giá</button>
+                </form>
 <!--              </ng-container>-->
             </div>
             <div *ngSwitchCase="2">

@@ -4,6 +4,8 @@ import {interval, Subscription} from 'rxjs';
 import {filter} from 'rxjs/operators';
 import {Tool} from '../../service/tool/tool';
 import {ProductService} from '../../service/product/product.service';
+import {FormGroup} from '@angular/forms';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-auction-product',
@@ -14,10 +16,13 @@ export class AuctionProductComponent implements OnInit {
   products: any[];
   productDetail: any;
   subscriptionTimer: Subscription;
+  auctionForm: FormGroup;
+  auctionHistorys: any[] = [];
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private toastrService: ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -55,5 +60,49 @@ export class AuctionProductComponent implements OnInit {
       }
     });
   }
+  // auction() {
+  //   // const user = this.user$.value;
+  //   // if (user == null) {
+  //   //   this.toastrService.error('Vui lòng đăng nhập để đấu giá');
+  //   //   return;
+  //   // }
+  //   // if (this.product.auctionCondition.vipAccount && !user.vipMember) {
+  //   //   this.toastrService.error('Bạn cần nâng vip để thực hiện phiên đấu giá');
+  //   //   return;
+  //   // }
+  //   const price = this.auctionForm.get('auctionPrice').value;
+  //   if (this.auctionHistorys && this.auctionHistorys.length > 1) {
+  //     const topPrice = this.auctionHistorys[0].price;
+  //     if (this.productDetail.priceStep) {
+  //       if (price < this.productDetail.priceStep + topPrice) {
+  //         this.toastrService.error('Mức chênh lệch với giá cao nhất phải bằng hoặc lớn hơn ' + (this.productDetail.priceStep + topPrice) + ' (giá cao nhất + bước giá)');
+  //         return;
+  //       }
+  //     } else if (price < topPrice) {
+  //       this.toastrService.error('Lượt đấu giá phải lớn hơn giá cao nhất hiện tại (' + topPrice + ')');
+  //       return;
+  //     }
+  //
+  //   } else if (this.productDetail.StartingPrice && price < this.productDetail.StartingPrice) {
+  //     this.toastrService.error('Lượt đấu giá phải lớn hơn giá sàn (' + this.productDetail.StartingPrice + ')');
+  //     return;
+  //   }
+  //
+  //    this.addAuction.mutate({
+  //      ownerId: this.productDetail.SaleManID,
+  //      createTime: new Date(this.productDetail.Created),
+  //
+  //
+  //    })
+  //      .subscribe(result => {
+  //        if (result.data.auction.success) {
+  //         this.toastrService.success(result.data.auction.message);
+  //        } else {
+  //         this.toastrService.error(result.data.auction.message);
+  //       }
+  //
+  //     });
+
+ // }
 
 }
