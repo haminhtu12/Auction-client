@@ -24,10 +24,8 @@ export class CustomerService {
     // console.log(this.getUsers());
     // return true;
   }
-  getUsers(): Observable<any> {
-    // get users from api
-    return this.http.get('/Api/Customer');
-      // .map((response: Response) => response.json());
+  login(params): Observable<any> {
+    return this.http.get('/Api/Customer', {params});
   }
   public findAll(): Observable<any> {
     const url = 'Api/Customer';

@@ -31,13 +31,20 @@
 <!--        </ng-container>-->
 <!--      </li>-->
     </ul>
-    <ul class="nav navbar-nav justify-content-end w-100">
+    <ul class="nav navbar-nav justify-content-end w-100" *ngIf="user == null">
       <ng-container>
         <li class="nav-item">
           <a class="nav-link" routerLink="/login">Đăng nhập</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/sign-up">Đăng ký</a>
+        </li>
+      </ng-container>
+    </ul>
+    <ul class="nav navbar-nav justify-content-end w-100" *ngIf="user != null">
+      <ng-container>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" (click)="logout()">Đăng xuất</a>
         </li>
       </ng-container>
     </ul>
