@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,29 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
   isCollapse = true;
-  constructor() { }
+  constructor(public router: Router) { }
   user: {
-    email: string;
-    passWord: string;
+    email: string,
+    pass: string,
+    fullName: string,
   };
+  fullName = '';
   ngOnInit(): void {
     this.user = {
-      email : '',
-      passWord : '',
+      email: '',
+      pass: '',
+      fullName: '',
     };
-    console.log(localStorage.getItem('email'));
-    if (localStorage.getItem('email') != null) {
-        this.user.email  = localStorage.getItem('email');
-    }
-    if (localStorage.getItem('password') != null) {
-      this.user.passWord  = localStorage.getItem('password');
+    console.log(localStorage.getItem('fullName'));
+    if (localStorage.getItem('fullName') != null) {
+        this.user.fullName = localStorage.getItem('fullName');
+        this.fullName = localStorage.getItem('fullName');
     }
     }
   tooggleMenu() {
     this.isCollapse = !this.isCollapse;
   }
   logout(){
-    localStorage.removeItem("user");
+    // localStorage.removeItem('user');
+    localStorage.clear();
+    this.user = null;
+    this.fullName = null;
+    window.location.reload();
+
   }
 
 }
