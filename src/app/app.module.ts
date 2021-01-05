@@ -9,7 +9,7 @@ import {AngularFireLite} from 'angularfire-lite';
 import {environment} from '../environments/environment';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ErrorComponent } from './component/ui/error/error.component';
 import {RouterModule} from '@angular/router';
 import { HomeComponent } from './component/home/home.component';
@@ -20,6 +20,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { AuctionProductComponent } from './component/auction-product/auction-product.component';
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
 
   declarations: [
@@ -43,7 +45,9 @@ import { AuctionProductComponent } from './component/auction-product/auction-pro
     // AngularFireLite.forRoot(environment.config),
     RouterModule.forRoot(routes),
     FormsModule,
-    NgbModule
+    NgbModule,
+    ToastrModule.forRoot(),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

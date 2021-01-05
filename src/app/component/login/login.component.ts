@@ -12,21 +12,24 @@ export class LoginComponent implements OnInit {
   pass: string;
   response: any;
   valid = false;
+  user: any;
   constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
+    this.user = null;
     this.getList();
   }
   login(e) {
-    for (let  i= 0; i < this.response.length; i++) {
-      if ((e.target.email.value == this.response[i].Email) && (e.target.password.value == this.response[i].Password)) {
-        this.valid = true;
-        break;
-      }
-    }
-    if (this.valid){
-      localStorage.setItem('email', e.target.email.value);
-      localStorage.setItem('password', e.target.password.value);
+    const params = {
+      email: e.target.email.value,
+      pwd: e.target.password.value,
+    };
+     this.customerService.login(params).subscribe(res => {
+       this.user = res;
+       console.log(this.user);
+     });
+    if (this.user != null){
+      localStorage.setItem('user', this.user);
     }
     this.valid = false;
   }

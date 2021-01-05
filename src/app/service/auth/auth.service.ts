@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
 import {AngularFireLiteAuth, AngularFireLiteFirestore} from 'angularfire-lite';
 import {first, switchMap} from 'rxjs/operators';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(public auth: AngularFireLiteAuth, public fs: AngularFireLiteFirestore) { }
+  constructor(public auth: AngularFireLiteAuth, public fs: AngularFireLiteFirestore, private http: HttpClient) { }
   isAuth() {
     return this.auth.isAuthenticated();
   }
+   login(): Observable<any> {
+     const url = 'Api/Customer';
+     return this.http.get(url);
+   }
 
   signin(email, pass) {
     return this.auth.signin(email, pass);
