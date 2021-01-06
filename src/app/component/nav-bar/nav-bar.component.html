@@ -1,60 +1,60 @@
-<nav class="navbar navbar-expand-lg navbar-dark header_btm">
-  <!-- <a class="navbar-brand" routerLink="/">Đấu giá trực tuyến Aditii</a> -->
-  <button class="navbar-toggler" (click)="tooggleMenu()" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<!--<nav class="navbar navbar-expand-lg navbar-dark header_btm">-->
+<!--  &lt;!&ndash; <a class="navbar-brand" routerLink="/">Đấu giá trực tuyến Aditii</a> &ndash;&gt;-->
+<!--  <button class="navbar-toggler" (click)="tooggleMenu()" type="button" data-toggle="collapse"-->
+<!--          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"-->
+<!--          aria-label="Toggle navigation">-->
+<!--    <span class="navbar-toggler-icon"></span>-->
+<!--  </button>-->
 
-  <div [ngbCollapse]="isCollapse" class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav w-100 mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/">Trang chủ</a>
-      </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" routerLink="/">Phiên đấu giá chung</a>
-      </li> -->
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="#">Phiên đấu giá của tôi</a>
-      </li> -->
-<!--      <li class="nav-item dropdown" ngbDropdown>-->
-<!--        <ng-container *ngIf="user != null">-->
-<!--          <a class="nav-link dropdown-toggle" id="navbarDropdown" ngbDropdownToggle role="button"-->
-<!--             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--            <span>{{ user.userName }}</span>-->
-<!--          </a>-->
-<!--          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--            <a *ngFor="let item of currentRole" class="dropdown-item"-->
-<!--               [routerLink]="item.route">{{item.name}}</a>-->
-<!--&lt;!&ndash;            <a *ngIf="user.role=='USERB'&&!user.vipMember" class="dropdown-item" (click)="upgradeVipmember()" >Nâng cấp vip (Chỉ 15,000VNĐ)</a>&ndash;&gt;-->
-<!--          </div>-->
-<!--        </ng-container>-->
+<!--  <div [ngbCollapse]="isCollapse" class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--    <ul class="navbar-nav w-100 mr-auto">-->
+<!--      <li class="nav-item active">-->
+<!--        <a class="nav-link" routerLink="/">Trang chủ</a>-->
 <!--      </li>-->
-    </ul>
-    <ul class="nav navbar-nav justify-content-end w-100" *ngIf="fullName == ''">
-      <ng-container>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login">Đăng nhập</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/sign-up">Đăng ký</a>
-        </li>
-      </ng-container>
-    </ul>
-    <ul class="nav navbar-nav justify-content-end w-100" *ngIf="fullName != ''">
-      <ng-container>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/" (click)="logout()">Xin Chào {{fullName}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/" (click)="logout()">Đăng xuất</a>
-        </li>
-      </ng-container>
-    </ul>
-    <ng-template #nonUser>
-      <li class="nav-item">
-<!--        <a class="nav-link" (click)="auth.logout()">Đăng xuất</a>-->
-      </li>
-    </ng-template>
-  </div>
-</nav>
+<!--      &lt;!&ndash; <li class="nav-item">-->
+<!--        <a class="nav-link" routerLink="/">Phiên đấu giá chung</a>-->
+<!--      </li> &ndash;&gt;-->
+<!--      &lt;!&ndash; <li class="nav-item">-->
+<!--        <a class="nav-link" href="#">Phiên đấu giá của tôi</a>-->
+<!--      </li> &ndash;&gt;-->
+<!--&lt;!&ndash;      <li class="nav-item dropdown" ngbDropdown>&ndash;&gt;-->
+<!--&lt;!&ndash;        <ng-container *ngIf="user != null">&ndash;&gt;-->
+<!--&lt;!&ndash;          <a class="nav-link dropdown-toggle" id="navbarDropdown" ngbDropdownToggle role="button"&ndash;&gt;-->
+<!--&lt;!&ndash;             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span>{{ user.userName }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;          </a>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a *ngFor="let item of currentRole" class="dropdown-item"&ndash;&gt;-->
+<!--&lt;!&ndash;               [routerLink]="item.route">{{item.name}}</a>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <a *ngIf="user.role=='USERB'&&!user.vipMember" class="dropdown-item" (click)="upgradeVipmember()" >Nâng cấp vip (Chỉ 15,000VNĐ)</a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </ng-container>&ndash;&gt;-->
+<!--&lt;!&ndash;      </li>&ndash;&gt;-->
+<!--    </ul>-->
+<!--    <ul class="nav navbar-nav justify-content-end w-100" *ngIf="fullName == ''">-->
+<!--      <ng-container>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" routerLink="/login">Đăng nhập</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" routerLink="/sign-up">Đăng ký</a>-->
+<!--        </li>-->
+<!--      </ng-container>-->
+<!--    </ul>-->
+<!--    <ul class="nav navbar-nav justify-content-end w-100" *ngIf="fullName != ''">-->
+<!--      <ng-container>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" routerLink="/" (click)="logout()">Xin Chào {{fullName}}</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" routerLink="/" (click)="logout()">Đăng xuất</a>-->
+<!--        </li>-->
+<!--      </ng-container>-->
+<!--    </ul>-->
+<!--    <ng-template #nonUser>-->
+<!--      <li class="nav-item">-->
+<!--&lt;!&ndash;        <a class="nav-link" (click)="auth.logout()">Đăng xuất</a>&ndash;&gt;-->
+<!--      </li>-->
+<!--    </ng-template>-->
+<!--  </div>-->
+<!--</nav>-->
