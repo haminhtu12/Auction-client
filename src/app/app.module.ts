@@ -21,6 +21,10 @@ import { HeaderComponent } from './component/header/header.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { AuctionProductComponent } from './component/auction-product/auction-product.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ProfileComponent } from './component/profile/profile.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { AboutComponent } from './component/about/about.component';
+import { ContactComponent } from './component/contact/contact.component';
 
 @NgModule({
 
@@ -36,7 +40,11 @@ import { ToastrModule } from 'ngx-toastr';
     FooterComponent,
     HeaderComponent,
     NavBarComponent,
-    AuctionProductComponent
+    AuctionProductComponent,
+    ProfileComponent,
+    DashboardComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
