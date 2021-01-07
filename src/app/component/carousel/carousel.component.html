@@ -1,121 +1,69 @@
-<!--
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="picsum-img-wrapper">
-          <img
-            src="https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/prero/prero3001121817/prero3001121817_q6_2-1._UX357_QL90_.jpg">
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="carousel-caption">
-          <h3>Đồng Hồ Rolex Daytona Rainbow Role</h3>
-          <p>Phiên đấu giá sắp được diễn ra vào ngày 03/02/2019</p>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-
-  <ng-template ngbSlide>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="picsum-img-wrapper">
-          <img
-            src="data:image/png;base64,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"
-            alt="IUH">
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="carousel-caption">
-          <h3>NHÓM 03</h3>
-          <p>Tú - Trung - Quyết</p>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-
-  <ng-template ngbSlide>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="picsum-img-wrapper">
-          <img src="assets/images/aution.jpg" alt="Random first slide">
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="carousel-caption">
-          <h3>Aditii</h3>
-          <p>Website hỗ trợ đấu giá nhanh chóng, chính xác và thuận tiện</p>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-</ngb-carousel>
--->
-<section class="banner-section bg_img" data-background="assets/images/banner/banner-bg-1.png">
+<section class="banner-section-2 bg_img" data-background="assets/images/banner/banner-bg-2.png">
   <div class="container">
-    <div class="row align-items-center justify-content-between">
+    <div class="row align-items-center justify-content-between align-items-center">
       <div class="col-lg-6 col-xl-6">
         <div class="banner-content cl-white">
-          <h5 class="cate">Next Generation Auction</h5>
-          <h1 class="title"><span class="d-xl-block">Find Your</span> Next Deal!</h1>
+          <h5 class="cate">Enjoy Exclusive</h5>
+          <h1 class="title"><span class="d-xl-block">Hot Deal</span> For You</h1>
           <p>
-            Online Auction is where everyone goes to shop, sell,and give, while discovering variety and affordability.
+            We’re constantly bringing new properties market so keep visiting our website that you don’t miss out on the next opportunity.
           </p>
           <a href="#0" class="custom-button yellow btn-large">Get Started</a>
         </div>
       </div>
-      <div class="d-none d-lg-block col-lg-6">
-        <div class="banner-thumb-2">
-          <img src="assets/images/banner/banner-1.png" alt="banner">
+      <div class="col-lg-6 col-xl-6 d-none d-lg-block">
+        <div class="banner-thumb">
+          <img src="assets/images/banner/banner-2.png" alt="banner">
         </div>
       </div>
     </div>
   </div>
-  <div class="banner-shape d-none d-lg-block">
-    <img src="assets/css/img/banner-shape.png" alt="css">
+  <div class="banner-shape-2 d-none d-lg-block">
+    <img src="assets/css/img/banner-shape-2.png" alt="css">
   </div>
 </section>
-<div class="browse-section ash-bg">
-  <!--============= Hightlight Slider Section Starts Here =============-->
-  <div class="browse-slider-section mt--140">
-    <div class="container">
-      <div class="section-header-2 cl-white mb-4">
-        <div class="left">
-          <h6 class="title pl-0 w-100">Browse the highlights</h6>
-        </div>
-        <div class="slider-nav">
-          <a href="#0" class="bro-prev"><i class="flaticon-left-arrow"></i></a>
-          <a href="#0" class="bro-next active"><i class="flaticon-right-arrow"></i></a>
-        </div>
+<!--============= Banner Section Ends Here =============-->
+
+
+<!--============= Hightlight Slider Section Starts Here =============-->
+<div class="browse-slider-section mt--140">
+  <div class="container">
+    <div class="section-header-2 mb-4">
+      <div class="left">
+        <h6 class="title cl-white cl-lg-black pl-0">Browse the highlights</h6>
       </div>
-      <div class="m--15">
-        <div class="browse-slider owl-theme owl-carousel">
-          <a href="#0" class="browse-item">
-            <img src="assets/images/auction/01.png" alt="auction">
-            <span class="info">Vehicles</span>
-          </a>
-          <a href="#0" class="browse-item">
-            <img src="assets/images/auction/02.png" alt="auction">
-            <span class="info">Jewelry</span>
-          </a>
-          <a href="#0" class="browse-item">
-            <img src="assets/images/auction/03.png" alt="auction">
-            <span class="info">Watches</span>
-          </a>
-          <a href="#0" class="browse-item">
-            <img src="assets/images/auction/04.png" alt="auction">
-            <span class="info">Electronics</span>
-          </a>
-          <a href="#0" class="browse-item">
-            <img src="assets/images/auction/05.png" alt="auction">
-            <span class="info">Sports</span>
-          </a>
-          <a href="#0" class="browse-item">
-            <img src="assets/images/auction/06.png" alt="auction">
-            <span class="info">Real Estate</span>
-          </a>
-        </div>
+      <div class="slider-nav">
+        <a href="#0" class="bro-prev"><i class="flaticon-left-arrow"></i></a>
+        <a href="#0" class="bro-next active"><i class="flaticon-right-arrow"></i></a>
+      </div>
+    </div>
+    <div class="m--15">
+      <div class="browse-slider owl-theme owl-carousel">
+        <a href="#0" class="browse-item">
+          <img src="assets/images/auction/01.png" alt="auction">
+          <span class="info">Vehicles</span>
+        </a>
+        <a href="#0" class="browse-item">
+          <img src="assets/images/auction/02.png" alt="auction">
+          <span class="info">Jewelry</span>
+        </a>
+        <a href="#0" class="browse-item">
+          <img src="assets/images/auction/03.png" alt="auction">
+          <span class="info">Watches</span>
+        </a>
+        <a href="#0" class="browse-item">
+          <img src="assets/images/auction/04.png" alt="auction">
+          <span class="info">Electronics</span>
+        </a>
+        <a href="#0" class="browse-item">
+          <img src="assets/images/auction/05.png" alt="auction">
+          <span class="info">Sports</span>
+        </a>
+        <a href="#0" class="browse-item">
+          <img src="assets/images/auction/06.png" alt="auction">
+          <span class="info">RealEstate</span>
+        </a>
       </div>
     </div>
   </div>
+</div>

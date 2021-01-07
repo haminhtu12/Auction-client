@@ -1,4 +1,5 @@
 /*
+!*
 .header{
 
 }
@@ -245,17 +246,17 @@
 }
 
 ol,ul{list-style:none;margin:0;padding:0;}
-*/
+*!
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto:ital,wght@0,400;0,500;0,700;1,500&amp;display=swap");
-/*
+!*
 Template Name: Sbidu - Bid & Auction HTML Template
 Template URI: http://pixner.net/sbidu/
 Author: uiaxis
 Author URI: https://themeforest.net/user/uiaxis
 Version: 1.0.0
 Text Domain:
-*/
-/*
+*!
+!*
 ///// CSS Index \\
 01. Reset CSS Start
 ---------------------------
@@ -330,7 +331,7 @@ Text Domain:
 ---------------------------
 35. All Animation Section CSS
 ---------------------------
-*/
+*!
 html {
   color: #222;
   font-size: 1em;
@@ -1066,7 +1067,7 @@ input[type="submit"] {
   position: relative;
 }
 
-/*Section Header*/
+!*Section Header*!
 .mb-30-none {
   margin-bottom: -30px !important;
 }
@@ -1242,7 +1243,7 @@ input[type="submit"] {
   overflow: hidden;
 }
 
-/*Section-Header Starts Here*/
+!*Section-Header Starts Here*!
 .section-bg {
   background: #f1f3fd;
 }
@@ -1864,7 +1865,7 @@ input[type="submit"] {
   }
 }
 
-/*Footer Section Starts Here*/
+!*Footer Section Starts Here*!
 footer {
   position: relative;
 }
@@ -2146,7 +2147,7 @@ footer {
   }
 }
 
-/*Header Sectionn Starts Here*/
+!*Header Sectionn Starts Here*!
 .header-top-wrapper {
   justify-content: space-between;
 }
@@ -2575,7 +2576,7 @@ header {
   animation-duration: 1s;
 }
 
-/*Cart Area Sidebar Starts*/
+!*Cart Area Sidebar Starts*!
 .cart-sidebar-area {
   background-color: #0a3d62;
   max-width: 350px;
@@ -2723,7 +2724,7 @@ header {
   opacity: 1;
 }
 
-/*Banner Section One Starts Here*/
+!*Banner Section One Starts Here*!
 .banner-section {
   position: relative;
   padding: 220px 0 240px;
@@ -2838,7 +2839,7 @@ header {
   width: 100%;
 }
 
-/*Banner Section Two Starts Here*/
+!*Banner Section Two Starts Here*!
 .banner-section-2 {
   position: relative;
   overflow: hidden;
@@ -2929,7 +2930,7 @@ header {
   }
 }
 
-/*Browse Slider Seciton Starts Here*/
+!*Browse Slider Seciton Starts Here*!
 .browse-item {
   display: block;
   border-radius: 10px;
@@ -2966,7 +2967,7 @@ header {
   margin-top: -140px;
 }
 
-/*Banner Section Four Starts Here*/
+!*Banner Section Four Starts Here*!
 .bot-0 {
   bottom: 0;
 }
@@ -3136,7 +3137,7 @@ header {
   }
 }
 
-/*Banner Section 5 Starts Here*/
+!*Banner Section 5 Starts Here*!
 .banner-section-5 {
   position: relative;
   overflow: hidden;
@@ -3242,7 +3243,7 @@ header {
   left: -15px;
 }
 
-/*Hero Section Starts Here*/
+!*Hero Section Starts Here*!
 .hero-section {
   position: relative;
   padding: 190px 0 505px;
@@ -3313,7 +3314,7 @@ header {
   color: #ffffff;
 }
 
-/*Sidebar Widget Starts Here*/
+!*Sidebar Widget Starts Here*!
 .widget {
   background: #ffffff;
   padding: 30px;
@@ -3438,7 +3439,7 @@ header {
   padding-right: 0;
 }
 
-/*Client Section Starts Here*/
+!*Client Section Starts Here*!
 .client-item {
   background: #ffffff;
   margin: 15px;
@@ -3498,7 +3499,7 @@ div[class*="auction"] .custom-button {
   text-transform: capitalize;
 }
 
-/*How Section Starts Here*/
+!*How Section Starts Here*!
 .how-wrapper {
   padding: 60px;
   border-radius: 20px;
@@ -3603,7 +3604,7 @@ div[class*="auction"] .custom-button {
   right: 0;
 }
 
-/*Art & Electronics Auction Section Starts Here*/
+!*Art & Electronics Auction Section Starts Here*!
 .auction-item-1 {
   border: 1px solid #d4d7f5;
   border-radius: 10px;
@@ -3749,7 +3750,7 @@ div[class*="auction"] .custom-button {
   -webkit-text-fill-color: transparent;
 }
 
-/*Coins & Bullions Auction Section Starts Here*/
+!*Coins & Bullions Auction Section Starts Here*!
 .auction-item-2 {
   padding: 10px 10px 30px;
   border-radius: 10px;
@@ -3961,7 +3962,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Jewelry Section Starts Here*/
+!*Jewelry Section Starts Here*!
 .jewelry-bg, .car-bg {
   position: absolute;
   width: 100%;
@@ -3981,7 +3982,7 @@ div[class*="auction"] .custom-button {
   transform: translateX(-50%);
 }
 
-/*Call In Section Starts Here*/
+!*Call In Section Starts Here*!
 .call-wrapper {
   padding: 80px 80px 50px;
   border-radius: 20px;
@@ -4019,7 +4020,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Popular Auction Section Starts Here*/
+!*Popular Auction Section Starts Here*!
 .auction-item-3 {
   margin-bottom: 40px;
 }
@@ -4182,7 +4183,7 @@ div[class*="auction"] .custom-button {
   background-position: left top;
 }
 
-/*Real Estate Auction Starts Here*/
+!*Real Estate Auction Starts Here*!
 .auction-item-4 {
   border-radius: 10px;
   display: flex;
@@ -4483,7 +4484,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Upcoming Auction Section Starts Here*/
+!*Upcoming Auction Section Starts Here*!
 .filter-wrapper {
   box-shadow: 0px 14px 10px 0px #ece8fd;
   margin-bottom: 40px;
@@ -4951,7 +4952,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Upcoming Auction Section Starts Here*/
+!*Upcoming Auction Section Starts Here*!
 .auction-item-7 {
   padding: 15px;
   width: 100%;
@@ -5370,7 +5371,7 @@ div[class*="auction"] .custom-button {
   color: #ffffff;
 }
 
-/*Trending Auction Starts Here*/
+!*Trending Auction Starts Here*!
 .auction-item-6 {
   margin-bottom: 30px;
 }
@@ -5592,7 +5593,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Fetured Auction Section Starts Here*/
+!*Fetured Auction Section Starts Here*!
 .auction-item-8 {
   border-radius: 10px;
   background-color: #ffffff;
@@ -5891,7 +5892,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Team Section Starts Here*/
+!*Team Section Starts Here*!
 .team-item {
   max-width: 220px;
   margin: 0 auto 30px;
@@ -5961,7 +5962,7 @@ div[class*="auction"] .custom-button {
   color: #ee4730;
 }
 
-/*Overview Section Starts Here*/
+!*Overview Section Starts Here*!
 .expert-item {
   text-align: center;
   margin-bottom: 40px;
@@ -5989,7 +5990,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Counter Section Starts Here*/
+!*Counter Section Starts Here*!
 .counter-item {
   text-align: center;
   padding: 28px 30px 30px;
@@ -6007,7 +6008,7 @@ div[class*="auction"] .custom-button {
   margin-bottom: 20px;
 }
 
-/*About Section Starts Here*/
+!*About Section Starts Here*!
 .about-content {
   position: relative;
   z-index: 1;
@@ -6120,7 +6121,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Account Section Starts Here*/
+!*Account Section Starts Here*!
 .login-with {
   margin: -15px;
   margin-bottom: 20px;
@@ -6319,7 +6320,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Contact Section Starts Here*/
+!*Contact Section Starts Here*!
 .contact-wrapper {
   position: relative;
   background: #ffffff;
@@ -6413,7 +6414,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Error Section Starts Here*/
+!*Error Section Starts Here*!
 .error-section {
   min-height: 100vh;
   justify-content: center;
@@ -6442,7 +6443,7 @@ div[class*="auction"] .custom-button {
   color: #ee4730;
 }
 
-/*Faq Section Menu Starts Here*/
+!*Faq Section Menu Starts Here*!
 .sticky-menu {
   position: sticky;
   top: 120px;
@@ -7020,7 +7021,7 @@ div[class*="auction"] .custom-button {
   background: -ms-linear-gradient(166deg, #f22876 0%, #942dd9 100%);
 }
 
-/*Product Details Section Starts Here*/
+!*Product Details Section Starts Here*!
 .product-bottom-slider {
   width: calc(100% - 100px);
   margin: 0 auto;
@@ -7868,7 +7869,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Dashboard Section Starts Here*/
+!*Dashboard Section Starts Here*!
 .dashboard-widget {
   border-radius: 20px;
   background-color: #ffffff;
@@ -8101,7 +8102,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Profile Section Starts Here*/
+!*Profile Section Starts Here*!
 .dash-pro-item .header {
   justify-content: space-between;
   margin-bottom: 30px;
@@ -8259,7 +8260,7 @@ div[class*="auction"] .custom-button {
   border-color: #171d1c;
 }
 
-/*Alert Section Starts Here*/
+!*Alert Section Starts Here*!
 .alert-widget ul {
   padding: 23px 0 20px;
   margin-bottom: -50px;
@@ -8307,7 +8308,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*Refferral Section Starts Here*/
+!*Refferral Section Starts Here*!
 .referral-form {
   position: relative;
 }
@@ -8530,7 +8531,7 @@ div[class*="auction"] .custom-button {
   }
 }
 
-/*All Animation Ends Here*/
+!*All Animation Ends Here*!
 .scrollToTop {
   width: 35px;
   height: 35px;
@@ -8944,7 +8945,7 @@ button.custom-button {
   }
 }
 
-/* inner ripple */
+!* inner ripple *!
 @keyframes inner-ripple {
   0% {
     transform: scale(1);
@@ -9081,4 +9082,5 @@ button.custom-button {
   font-size: 16px;
 }
 
-/*All Animation Ends Here*/
+!*All Animation Ends Here*!
+*/
