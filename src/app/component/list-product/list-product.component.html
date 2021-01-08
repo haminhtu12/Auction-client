@@ -66,16 +66,16 @@
       <p>Bid and win great deals,Our auction process is simple, efficient, and transparent.</p>
     </div>
     <div class="row justify-content-center mb-30-none">
-      <div class="col-sm-10 col-md-6 col-lg-4">
+      <div class="col-sm-10 col-md-6 col-lg-4" *ngFor="let product of products">
         <div class="auction-item-2">
           <div class="auction-thumb">
-            <a routerLink="/auction-product"><img src="assets/images/auction/car/auction-1.jpg" alt="jewelry"></a>
+            <a routerLink="/auction-product"><img src="{{product.Image}}" alt="jewelry"></a>
             <a href="#0" class="rating"><i class="far fa-star"></i></a>
             <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
           </div>
           <div class="auction-content">
             <h6 class="title">
-              <a routerLink="/auction-product">2018 Hyundai Sonata</a>
+              <a routerLink="/auction-product">{{product.ProName}}</a>
             </h6>
             <div class="bid-area">
               <div class="bid-amount">
@@ -93,7 +93,7 @@
                 </div>
                 <div class="amount-content">
                   <div class="current">Buy Now</div>
-                  <div class="amount">$5,00.00</div>
+                  <div class="amount">{{product.PurchasingPrice}}</div>
                 </div>
               </div>
             </div>
@@ -109,92 +109,92 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-10 col-md-6 col-lg-4">
-        <div class="auction-item-2">
-          <div class="auction-thumb">
-            <a href="product-details.html"><img src="assets/images/auction/jewelry/auction-2.jpg" alt="jewelry"></a>
-            <a href="#0" class="rating"><i class="far fa-star"></i></a>
-            <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
-          </div>
-          <div class="auction-content">
-            <h6 class="title">
-              <a href="product-details.html">Ring With Clear Stone Accents</a>
-            </h6>
-            <div class="bid-area">
-              <div class="bid-amount">
-                <div class="icon">
-                  <i class="flaticon-auction"></i>
-                </div>
-                <div class="amount-content">
-                  <div class="current">Current Bid</div>
-                  <div class="amount">$876.00</div>
-                </div>
-              </div>
-              <div class="bid-amount">
-                <div class="icon">
-                  <i class="flaticon-money"></i>
-                </div>
-                <div class="amount-content">
-                  <div class="current">Buy Now</div>
-                  <div class="amount">$5,00.00</div>
-                </div>
-              </div>
-            </div>
-            <div class="countdown-area">
-              <div class="countdown">
-                <div id="bid_counter24"></div>
-              </div>
-              <span class="total-bids">30 Bids</span>
-            </div>
-            <div class="text-center">
-              <a href="#0" class="custom-button">Submit a bid</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-10 col-md-6 col-lg-4">
-        <div class="auction-item-2">
-          <div class="auction-thumb">
-            <a href="product-details.html"><img src="assets/images/auction/watches/auction-2.jpg" alt="jewelry"></a>
-            <a href="#0" class="rating"><i class="far fa-star"></i></a>
-            <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
-          </div>
-          <div class="auction-content">
-            <h6 class="title">
-              <a href="product-details.html">Lady’s Vintage Rolex Datejust</a>
-            </h6>
-            <div class="bid-area">
-              <div class="bid-amount">
-                <div class="icon">
-                  <i class="flaticon-auction"></i>
-                </div>
-                <div class="amount-content">
-                  <div class="current">Current Bid</div>
-                  <div class="amount">$876.00</div>
-                </div>
-              </div>
-              <div class="bid-amount">
-                <div class="icon">
-                  <i class="flaticon-money"></i>
-                </div>
-                <div class="amount-content">
-                  <div class="current">Buy Now</div>
-                  <div class="amount">$5,00.00</div>
-                </div>
-              </div>
-            </div>
-            <div class="countdown-area">
-              <div class="countdown">
-                <div id="bid_counter25"></div>
-              </div>
-              <span class="total-bids">30 Bids</span>
-            </div>
-            <div class="text-center">
-              <a href="#0" class="custom-button">Submit a bid</a>
-            </div>
-          </div>
-        </div>
-      </div>
+<!--      <div class="col-sm-10 col-md-6 col-lg-4">-->
+<!--        <div class="auction-item-2">-->
+<!--          <div class="auction-thumb">-->
+<!--            <a href="product-details.html"><img src="assets/images/auction/jewelry/auction-2.jpg" alt="jewelry"></a>-->
+<!--            <a href="#0" class="rating"><i class="far fa-star"></i></a>-->
+<!--            <a href="#0" class="bid"><i class="flaticon-auction"></i></a>-->
+<!--          </div>-->
+<!--          <div class="auction-content">-->
+<!--            <h6 class="title">-->
+<!--              <a href="product-details.html">Ring With Clear Stone Accents</a>-->
+<!--            </h6>-->
+<!--            <div class="bid-area">-->
+<!--              <div class="bid-amount">-->
+<!--                <div class="icon">-->
+<!--                  <i class="flaticon-auction"></i>-->
+<!--                </div>-->
+<!--                <div class="amount-content">-->
+<!--                  <div class="current">Current Bid</div>-->
+<!--                  <div class="amount">$876.00</div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="bid-amount">-->
+<!--                <div class="icon">-->
+<!--                  <i class="flaticon-money"></i>-->
+<!--                </div>-->
+<!--                <div class="amount-content">-->
+<!--                  <div class="current">Buy Now</div>-->
+<!--                  <div class="amount">$5,00.00</div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="countdown-area">-->
+<!--              <div class="countdown">-->
+<!--                <div id="bid_counter24"></div>-->
+<!--              </div>-->
+<!--              <span class="total-bids">30 Bids</span>-->
+<!--            </div>-->
+<!--            <div class="text-center">-->
+<!--              <a href="#0" class="custom-button">Submit a bid</a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col-sm-10 col-md-6 col-lg-4">-->
+<!--        <div class="auction-item-2">-->
+<!--          <div class="auction-thumb">-->
+<!--            <a href="product-details.html"><img src="assets/images/auction/watches/auction-2.jpg" alt="jewelry"></a>-->
+<!--            <a href="#0" class="rating"><i class="far fa-star"></i></a>-->
+<!--            <a href="#0" class="bid"><i class="flaticon-auction"></i></a>-->
+<!--          </div>-->
+<!--          <div class="auction-content">-->
+<!--            <h6 class="title">-->
+<!--              <a href="product-details.html">Lady’s Vintage Rolex Datejust</a>-->
+<!--            </h6>-->
+<!--            <div class="bid-area">-->
+<!--              <div class="bid-amount">-->
+<!--                <div class="icon">-->
+<!--                  <i class="flaticon-auction"></i>-->
+<!--                </div>-->
+<!--                <div class="amount-content">-->
+<!--                  <div class="current">Current Bid</div>-->
+<!--                  <div class="amount">$876.00</div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="bid-amount">-->
+<!--                <div class="icon">-->
+<!--                  <i class="flaticon-money"></i>-->
+<!--                </div>-->
+<!--                <div class="amount-content">-->
+<!--                  <div class="current">Buy Now</div>-->
+<!--                  <div class="amount">$5,00.00</div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="countdown-area">-->
+<!--              <div class="countdown">-->
+<!--                <div id="bid_counter25"></div>-->
+<!--              </div>-->
+<!--              <span class="total-bids">30 Bids</span>-->
+<!--            </div>-->
+<!--            <div class="text-center">-->
+<!--              <a href="#0" class="custom-button">Submit a bid</a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
     <div class="load-wrapper">
       <a href="#0" class="normal-button">See All Auction</a>
@@ -235,26 +235,26 @@
     <div class="m--15">
       <div class="auction-wrapper-5">
 
-        <div class="auction-item-5 time">
+        <div class="auction-item-5 time" *ngFor="let product of products">
           <div class="auction-inner">
             <div class="upcoming-badge" title="Upcoming Auction">
               <i class="flaticon-auction"></i>
             </div>
             <div class="auction-thumb">
-              <a href="product-details.html"><img src="assets/images/auction/upcoming/upcoming-1.png" alt="upcoming"></a>
+              <a href="product-details.html"><img src="{{product.Image}}" alt="upcoming"></a>
               <a href="product-details.html" class="rating"><i class="far fa-star"></i></a>
             </div>
             <div class="auction-content">
               <div class="title-area">
                 <h6 class="title">
-                  <a href="#0">Apple Macbook Pro Laptop</a>
+                  <a href="#0">{{product.ProName}}</a>
                 </h6>
                 <div class="list-area">
                                         <span class="list-item">
-                                            <span class="list-id">Listing ID</span>14033488
+                                            <span class="list-id">Listing ID</span>{{product.ID}}
                                         </span>
                   <span class="list-item">
-                                            <span class="list-id">Item #</span>0900-027867
+                                            <span class="list-id">Item #</span>{{product.ID}}
                                         </span>
                 </div>
               </div>
@@ -275,7 +275,7 @@
                     </div>
                     <div class="amount-content">
                       <div class="current">Buy Now</div>
-                      <div class="amount">$5,00.00</div>
+                      <div class="amount">{{product.PurchasingPrice}}</div>
                     </div>
                   </div>
                 </div>
