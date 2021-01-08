@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import {interval} from 'rxjs';
 import {filter} from 'rxjs/operators';
 import {Tool} from '../../service/tool/tool';
+import {log} from "util";
 
 @Component({
   selector: 'app-list-product',
