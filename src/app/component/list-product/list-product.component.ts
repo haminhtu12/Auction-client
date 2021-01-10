@@ -43,6 +43,8 @@ export class ListProductComponent implements OnInit {
           for (let i =0 ; i < product.currentAuction.length - 1 ; i++){
             if (product.max.Created < product.currentAuction[i].Created) product.max =  product.currentAuction[i];
           }
+          product.currentDate = currentDate;
+          // product.lastBird = Tool.getDataDiff(currentDate, product.max.Created);
         }
       });
     });
@@ -56,5 +58,13 @@ export class ListProductComponent implements OnInit {
         this.listAuction = res;
       }
     });
+  }
+   getDataDiff(startDate, endDate) {
+    const diff = endDate.getTime() - startDate.getTime();
+    const days = Math.floor(diff / (60 * 60 * 24 * 1000));
+    const hours = Math.floor(diff / (60 * 60 * 1000)) - (days * 24);
+    const minutes = Math.floor(diff / (60 * 1000)) - ((days * 24 * 60) + (hours * 60));
+    const seconds = Math.floor(diff / 1000) - ((days * 24 * 60 * 60) + (hours * 60 * 60) + (minutes * 60));
+    return { day: days, hour: hours, minute: minutes, second: seconds };
   }
 }
