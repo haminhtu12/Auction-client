@@ -84,7 +84,7 @@
                 </div>
                 <div class="amount-content">
                   <div class="current">Current Bid</div>
-                  <div class="amount">$876.00</div>
+                  <div class="amount">{{product.max ? product.max.Price : product.StartingPrice}}</div>
                 </div>
               </div>
               <div class="bid-amount">
@@ -101,7 +101,7 @@
               <div class="countdown">
                 <div id="bid_counter23"></div>
               </div>
-              <span class="total-bids">30 Bids</span>
+              <span class="total-bids">{{product.currentBird}} Bids</span>
             </div>
             <div class="text-center">
               <a href="#0" class="custom-button">Submit a bid</a>
