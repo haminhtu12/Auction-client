@@ -81,7 +81,7 @@
                 <div *ngSwitchCase="1">
                   <span class="badge badge-success">Đang diễn ra</span>
                   <br>
-                  <label>Còn lại <span>
+                  <label> <span>
 								{{ product.Timer?.day }} day	{{ product.Timer?.hour }}h:{{ product.Timer?.minute }}m:{{product.Timer?.second}}s
 								</span>
                   </label>
@@ -282,7 +282,7 @@
                     <div *ngSwitchCase="1">
                       <span class="badge badge-success">Đang diễn ra</span>
                       <br>
-                      <label>Còn lại <span>
+                      <label> <span>
 								{{ product.Timer?.day }} day	{{ product.Timer?.hour }}h:{{ product.Timer?.minute }}m:{{product.Timer?.second}}s
 								</span>
                       </label>
@@ -342,7 +342,7 @@
               </div>
               <div class="bid-incr">
                 <span class="title">Bid Increment</span>
-                <h4>$3</h4>
+                <h4>{{product.max ? product.max.Price + product.PriceStep : product.StartingPrice +  product.PriceStep}}</h4>
               </div>
               <a href="#0" class="custom-button">Submit a bid</a>
             </div>
