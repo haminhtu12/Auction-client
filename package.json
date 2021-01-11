@@ -24,6 +24,7 @@
     "angularfire-lite": "^6.0.3",
     "firebase": "^8.2.1",
     "firebase-admin": "^9.4.2",
+    "lodash": "^4.17.20",
     "ngx-toastr": "^13.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

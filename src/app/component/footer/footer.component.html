@@ -1,50 +1,240 @@
-<!-- Footer -->
-<section id="footer">
-  <div class="container">
-    <div class="row text-center text-xs-center text-sm-left text-md-left">
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <h5>Aditii</h5>
-        <ul class="list-unstyled quick-links">
-          <li><a routerLink="/"><i class="fa fa-angle-double-right"></i>Trang chủ</a></li>
-          <!-- <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phiên đấu giá chung</a></li> -->
-          <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Câu hỏi thường gặp</a></li>
-          <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Các hình thức đấu giá</a>
-          </li>
-          <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách của chúng
-            tôi</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <h5>Danh mục sản phẩm</h5>
-        <ul class="list-unstyled quick-links">
-<!--          <li *ngFor="let category of categories" ><a routerLink="/category/{{category.id}}"><i class="fa fa-angle-double-right"></i>{{category.name}}</a></li>-->
-          <!-- <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phong Thủy</a></li>
-            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Công nghệ</a></li>
-            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Trải nghiệm</a></li> -->
-          <li><a routerLink="/"><i class="fa fa-angle-double-right"></i>Tất cả danh mục</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <h5>Kết nối với chúng tôi</h5>
-        <ul class="list-unstyled quick-links">
-          <li><a href="javascript:void();"><i class="fa fa-facebook"></i> Facebook</a></li>
-          <li><a href="javascript:void();"><i class="fa fa-twitter"></i>Twitter</a></li>
-          <li><a href="javascript:void();"><i class="fa fa-instagram"></i>Instragram</a></li>
-          <li><a href="https://aws.amazon.com"><i class="fa fa-google-plus"></i>Google+</a></li>
-          <li><a href="javascript:void();" target="_blank"><i
-            class="fa fa-envelope"></i>support@aditii.nhom3.fpt.edu</a></li>
-        </ul>
-      </div>
+<!--&lt;!&ndash; Footer &ndash;&gt;-->
+<!--<section id="footer">-->
+<!--  <div class="container">-->
+<!--    <div class="row text-center text-xs-center text-sm-left text-md-left">-->
+<!--      <div class="col-xs-12 col-sm-4 col-md-4">-->
+<!--        <h5>Aditii</h5>-->
+<!--        <ul class="list-unstyled quick-links">-->
+<!--          <li><a routerLink="/"><i class="fa fa-angle-double-right"></i>Trang chủ</a></li>-->
+<!--          &lt;!&ndash; <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phiên đấu giá chung</a></li> &ndash;&gt;-->
+<!--          <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Câu hỏi thường gặp</a></li>-->
+<!--          <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Các hình thức đấu giá</a>-->
+<!--          </li>-->
+<!--          <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Chính sách của chúng-->
+<!--            tôi</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--      <div class="col-xs-12 col-sm-4 col-md-4">-->
+<!--        <h5>Danh mục sản phẩm</h5>-->
+<!--        <ul class="list-unstyled quick-links">-->
+<!--&lt;!&ndash;          <li *ngFor="let category of categories" ><a routerLink="/category/{{category.id}}"><i class="fa fa-angle-double-right"></i>{{category.name}}</a></li>&ndash;&gt;-->
+<!--          &lt;!&ndash; <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phong Thủy</a></li>-->
+<!--            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Công nghệ</a></li>-->
+<!--            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Trải nghiệm</a></li> &ndash;&gt;-->
+<!--          <li><a routerLink="/"><i class="fa fa-angle-double-right"></i>Tất cả danh mục</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--      <div class="col-xs-12 col-sm-4 col-md-4">-->
+<!--        <h5>Kết nối với chúng tôi</h5>-->
+<!--        <ul class="list-unstyled quick-links">-->
+<!--          <li><a href="javascript:void();"><i class="fa fa-facebook"></i> Facebook</a></li>-->
+<!--          <li><a href="javascript:void();"><i class="fa fa-twitter"></i>Twitter</a></li>-->
+<!--          <li><a href="javascript:void();"><i class="fa fa-instagram"></i>Instragram</a></li>-->
+<!--          <li><a href="https://aws.amazon.com"><i class="fa fa-google-plus"></i>Google+</a></li>-->
+<!--          <li><a href="javascript:void();" target="_blank"><i-->
+<!--            class="fa fa-envelope"></i>support@aditii.nhom3.fpt.edu</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">-->
+<!--        <p><u><a href="https://github.com">Website hỗ trợ đấu giá trực tuyến</a></u> giúp phiên đấu giá diễn ra-->
+<!--          nhanh chóng, chính xác và thuận tiện</p>-->
+<!--        <p class="h6">Được xây dựng và phát triển bới Nhóm 03 - Công Nghệ Mới - FPT-Aptech<a class="text-green ml-2"-->
+<!--                                                                                      href="https://github.com" target="_blank"></a></p>-->
+<!--      </div>-->
+<!--      <hr>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; ./Footer &ndash;&gt;-->
+<footer class="bg_img padding-top oh" data-background="assets/images/footer/footer-bg.jpg">
+  <div class="footer-top-shape">
+    <img src="assets/css/img/footer-top-shape.png" alt="css">
+  </div>
+  <div class="anime-wrapper">
+    <div class="anime-1 plus-anime">
+      <img src="assets/images/footer/p1.png" alt="footer">
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-        <p><u><a href="https://github.com">Website hỗ trợ đấu giá trực tuyến</a></u> giúp phiên đấu giá diễn ra
-          nhanh chóng, chính xác và thuận tiện</p>
-        <p class="h6">Được xây dựng và phát triển bới Nhóm 03 - Công Nghệ Mới - FPT-Aptech<a class="text-green ml-2"
-                                                                                      href="https://github.com" target="_blank"></a></p>
-      </div>
-      <hr>
+    <div class="anime-2 plus-anime">
+      <img src="assets/images/footer/p2.png" alt="footer">
+    </div>
+    <div class="anime-3 plus-anime">
+      <img src="assets/images/footer/p3.png" alt="footer">
+    </div>
+    <div class="anime-5 zigzag">
+      <img src="assets/images/footer/c2.png" alt="footer">
+    </div>
+    <div class="anime-6 zigzag">
+      <img src="assets/images/footer/c3.png" alt="footer">
+    </div>
+    <div class="anime-7 zigzag">
+      <img src="assets/images/footer/c4.png" alt="footer">
     </div>
   </div>
-</section>
-<!-- ./Footer -->
+  <div class="newslater-wrapper">
+    <div class="container">
+      <div class="newslater-area">
+        <div class="newslater-thumb">
+          <img src="assets/images/footer/newslater.png" alt="footer">
+        </div>
+        <div class="newslater-content">
+          <div class="section-header left-style mb-low">
+            <h5 class="cate">Subscribe to Sbidu</h5>
+            <h3 class="title">To Get Exclusive Benefits</h3>
+          </div>
+          <form class="subscribe-form">
+            <input type="text" placeholder="Enter Your Email" name="email">
+            <button type="submit" class="custom-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-top padding-bottom padding-top">
+    <div class="container">
+      <div class="row mb--60">
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-widget widget-links">
+            <h5 class="title">Auction Categories</h5>
+            <ul class="links-list">
+              <li>
+                <a href="#0">Ending Now</a>
+              </li>
+              <li>
+                <a href="#0">Vehicles</a>
+              </li>
+              <li>
+                <a href="#0">Watches</a>
+              </li>
+              <li>
+                <a href="#0">Electronics</a>
+              </li>
+              <li>
+                <a href="#0">Real Estate</a>
+              </li>
+              <li>
+                <a href="#0">Jewelry</a>
+              </li>
+              <li>
+                <a href="#0">Art</a>
+              </li>
+              <li>
+                <a href="#0">Sports & Outdoor</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-widget widget-links">
+            <h5 class="title">About Us</h5>
+            <ul class="links-list">
+              <li>
+                <a href="#0">About Sbidu</a>
+              </li>
+              <li>
+                <a href="#0">Help</a>
+              </li>
+              <li>
+                <a href="#0">Affiliates</a>
+              </li>
+              <li>
+                <a href="#0">Jobs</a>
+              </li>
+              <li>
+                <a href="#0">Press</a>
+              </li>
+              <li>
+                <a href="#0">Our blog</a>
+              </li>
+              <li>
+                <a href="#0">Collectors' portal</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-widget widget-links">
+            <h5 class="title">We're Here to Help</h5>
+            <ul class="links-list">
+              <li>
+                <a href="#0">Your Account</a>
+              </li>
+              <li>
+                <a href="#0">Safe and Secure</a>
+              </li>
+              <li>
+                <a href="#0">Shipping Information</a>
+              </li>
+              <li>
+                <a href="#0">Contact Us</a>
+              </li>
+              <li>
+                <a href="#0">Help & FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-widget widget-follow">
+            <h5 class="title">Follow Us</h5>
+            <ul class="links-list">
+              <li>
+                <a href="#0"><i class="fas fa-phone-alt"></i>(646) 663-4575</a>
+              </li>
+              <li>
+                <a href="#0"><i class="fas fa-blender-phone"></i>(646) 968-0608</a>
+              </li>
+              <li>
+                <a href="#0"><i class="fas fa-envelope-open-text"></i>help@engotheme.com</a>
+              </li>
+              <li>
+                <a href="#0"><i class="fas fa-location-arrow"></i>1201 Broadway Suite</a>
+              </li>
+            </ul>
+            <ul class="social-icons">
+              <li>
+                <a href="#0" class="active"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#0"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#0"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#0"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="copyright-area">
+        <div class="footer-bottom-wrapper">
+          <div class="logo">
+            <a href="index.html"><img src="assets/images/logo/footer-logo.png" alt="logo"></a>
+          </div>
+          <ul class="gateway-area">
+            <li>
+              <a href="#0"><img src="assets/images/footer/paypal.png" alt="footer"></a>
+            </li>
+            <li>
+              <a href="#0"><img src="assets/images/footer/visa.png" alt="footer"></a>
+            </li>
+            <li>
+              <a href="#0"><img src="assets/images/footer/discover.png" alt="footer"></a>
+            </li>
+            <li>
+              <a href="#0"><img src="assets/images/footer/mastercard.png" alt="footer"></a>
+            </li>
+          </ul>
+          <div class="copyright"><p>&copy; Copyright 2020 | <a href="#0">Sbidu</a> By <a href="#0">Uiaxis</a></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
