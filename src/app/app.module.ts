@@ -25,6 +25,8 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { AboutComponent } from './component/about/about.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { AllProductComponent } from './component/all-product/all-product.component';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 
 @NgModule({
 
@@ -44,7 +46,9 @@ import { ContactComponent } from './component/contact/contact.component';
     ProfileComponent,
     DashboardComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AllProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
