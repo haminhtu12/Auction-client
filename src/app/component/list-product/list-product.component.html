@@ -68,7 +68,7 @@
     <div class="row justify-content-center mb-30-none">
       <div class="col-sm-10 col-md-6 col-lg-4" *ngFor="let product of products">
         <div class="auction-item-2">
-          <div class="auction-thumb">
+          <div class="auction-thumb" style="max-height: 185px;">
             <a routerLink="/auction-product"><img src="{{product.Image}}" alt="jewelry"></a>
             <a href="#0" class="rating"><i class="far fa-star"></i></a>
             <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
@@ -76,6 +76,27 @@
           <div class="auction-content">
             <h6 class="title">
               <a routerLink="/auction-product">{{product.ProName}}</a>
+
+              <div [ngSwitch]="product.Status">
+                <div *ngSwitchCase="1">
+                  <span class="badge badge-success">Đang diễn ra</span>
+                  <br>
+                  <label>Còn lại <span>
+								{{ product.Timer?.day }} day	{{ product.Timer?.hour }}h:{{ product.Timer?.minute }}m:{{product.Timer?.second}}s
+								</span>
+                  </label>
+                </div>
+                <div *ngSwitchCase="2">
+                  <span class="badge badge-danger">Đã kết thúc</span>
+                </div>
+                <div *ngSwitchCase="0">
+                  <span class="badge badge-warning">Sắp diễn ra</span>
+                  <br>
+                  <label>{{product.startTime | date:'short'}}</label>
+                </div>
+              </div>
+
+
             </h6>
             <div class="bid-area">
               <div class="bid-amount">
@@ -84,7 +105,7 @@
                 </div>
                 <div class="amount-content">
                   <div class="current">Current Bid</div>
-                  <div class="amount">$876.00</div>
+                  <div class="amount">{{product.max ? product.max.Price : product.StartingPrice}}</div>
                 </div>
               </div>
               <div class="bid-amount">
@@ -101,7 +122,7 @@
               <div class="countdown">
                 <div id="bid_counter23"></div>
               </div>
-              <span class="total-bids">30 Bids</span>
+              <span class="total-bids">{{product.currentBird}} Bids</span>
             </div>
             <div class="text-center">
               <a href="#0" class="custom-button">Submit a bid</a>
@@ -256,6 +277,27 @@
                   <span class="list-item">
                                             <span class="list-id">Item #</span>{{product.ID}}
                                         </span>
+
+                  <div [ngSwitch]="product.Status" style="margin-left: 15px">
+                    <div *ngSwitchCase="1">
+                      <span class="badge badge-success">Đang diễn ra</span>
+                      <br>
+                      <label>Còn lại <span>
+								{{ product.Timer?.day }} day	{{ product.Timer?.hour }}h:{{ product.Timer?.minute }}m:{{product.Timer?.second}}s
+								</span>
+                      </label>
+                    </div>
+                    <div *ngSwitchCase="2">
+                      <span class="badge badge-danger">Đã kết thúc</span>
+                    </div>
+                    <div *ngSwitchCase="0">
+                      <span class="badge badge-warning">Sắp diễn ra</span>
+                      <br>
+                      <label>{{product.startTime | date:'short'}}</label>
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
               <div class="bid-area">
@@ -266,7 +308,7 @@
                     </div>
                     <div class="amount-content">
                       <div class="current">Current Bid</div>
-                      <div class="amount">$876.00</div>
+                      <div class="amount">{{product.max ? product.max.Price : product.StartingPrice}}</div>
                     </div>
                   </div>
                   <div class="bid-amount">
@@ -282,10 +324,14 @@
               </div>
               <div class="bid-count-area">
                                     <span class="item">
-                                        <span class="left">Total Bids</span>97 Bids
+                                        <span class="left">Total Bids</span>{{product.currentBird}} Bids
                                     </span>
                 <span class="item">
-                                        <span class="left">Last Bid </span>7 mins ago
+                                        <span class="left">Last Bid </span>
+                  {{getDataDiff( product.max.Created ? product.max.Created : product.currentDate ,product.currentDate).day }} day
+                  {{getDataDiff( product.max.Created ? product.max.Created : product.currentDate ,product.currentDate).hour }} hour
+                  {{getDataDiff( product.max.Created ? product.max.Created : product.currentDate,product.currentDate).minute }} minute
+                  {{getDataDiff( product.max.Created ? product.max.Created : product.currentDate ,product.currentDate).second }} second
                                     </span>
               </div>
             </div>
